@@ -3,7 +3,7 @@ source "https://rubygems.org"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.4"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
-gem "propshaft"
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", ">= 2.1"
 # Use the Puma web server [https://github.com/puma/puma]
@@ -63,3 +63,7 @@ group :test do
 end
 
 gem 'devise'
+gem 'sprockets-rails'
+gem 'sassc'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'sassc-rails'
