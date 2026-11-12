@@ -111,12 +111,7 @@ GEM
     ed25519 (1.4.0)
     erb (6.0.7)
     erubi (1.13.1)
-    et-orbi (1.4.2)
-      tzinfo
     ffi (1.17.4-x86_64-linux-gnu)
-    fugit (1.14.0)
-      et-orbi (~> 1.4)
-      raabro (~> 1.4)
     globalid (1.4.0)
       activesupport (>= 6.1)
     i18n (1.15.2)
@@ -203,7 +198,6 @@ GEM
     public_suffix (7.0.5)
     puma (8.0.2)
       nio4r (~> 2.0)
-    raabro (1.5.0)
     racc (1.8.1)
     rack (3.2.7)
     rack-session (2.1.2)
@@ -296,22 +290,6 @@ GEM
       logger (~> 1.4)
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
-    solid_cable (4.1.0)
-      actioncable (>= 7.2)
-      activejob (>= 7.2)
-      activerecord (>= 7.2)
-      railties (>= 7.2)
-    solid_cache (1.0.10)
-      activejob (>= 7.2)
-      activerecord (>= 7.2)
-      railties (>= 7.2)
-    solid_queue (1.7.0)
-      activejob (>= 7.1)
-      activerecord (>= 7.1)
-      concurrent-ruby (>= 1.3.1)
-      fugit (~> 1.11)
-      railties (>= 7.1)
-      thor (>= 1.3.1)
     sqlite3 (2.10.0-x86_64-linux-gnu)
     sshkit (1.25.1)
       base64
@@ -367,9 +345,6 @@ DEPENDENCIES
   rails (~> 8.1.4)
   rubocop-rails-omakase
   selenium-webdriver
-  solid_cable
-  solid_cache
-  solid_queue
   sqlite3 (>= 2.1)
   stimulus-rails
   thruster
@@ -411,9 +386,7 @@ CHECKSUMS
   ed25519 (1.4.0)
   erb (6.0.7)
   erubi (1.13.1)
-  et-orbi (1.4.2)
   ffi (1.17.4-x86_64-linux-gnu)
-  fugit (1.14.0)
   globalid (1.4.0)
   i18n (1.15.2)
   image_processing (1.14.0)
@@ -452,7 +425,6 @@ CHECKSUMS
   propshaft (1.3.2)
   public_suffix (7.0.5)
   puma (8.0.2)
-  raabro (1.5.0)
   racc (1.8.1)
   rack (3.2.7)
   rack-session (2.1.2)
@@ -478,9 +450,6 @@ CHECKSUMS
   rubyzip (3.7.0)
   securerandom (0.4.1)
   selenium-webdriver (4.50.0)
-  solid_cable (4.1.0)
-  solid_cache (1.0.10)
-  solid_queue (1.7.0)
   sqlite3 (2.10.0-x86_64-linux-gnu)
   sshkit (1.25.1)
   stimulus-rails (1.3.4)
