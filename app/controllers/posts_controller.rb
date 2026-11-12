@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @posts = Post.all
   end
@@ -7,16 +9,11 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def create
-def destroy
-  @post = Post.find(params[:id])
-  if @post.destroy
-    redirect_to posts_path
-    flash[:success] = "The post is destroy!"
-  else
-    redirect_to posts_path
+  def new
+    @post = Post.new
   end
-end
+
+  def create
     @post = Post.new(permit_post)
     if @post.save
       flash[:success] = "Success!"
@@ -24,6 +21,16 @@ end
     else
       flash[:error] = @post.errors.full_messages.to_sentence
       redirect_to new_post_path
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      redirect_to posts_path
+      flash[:success] = "The post is destroy!"
+    else
+      redirect_to posts_path
     end
   end
 
