@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
   has_one_attached :image
-  validates :image, content_type: ['image/png', 'image/jpg', 'image/jpeg']
-  validates :description, presence: true
+  validates :image, presence: true
+  validates :description, presence: true, length: { minimum: 10 }
 end
