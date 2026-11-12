@@ -67,3 +67,4 @@ gem 'sprockets-rails'
 gem 'sassc'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sassc-rails'
+
