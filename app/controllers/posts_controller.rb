@@ -8,6 +8,15 @@ class PostsController < ApplicationController
   end
 
   def create
+def destroy
+  @post = Post.find(params[:id])
+  if @post.destroy
+    redirect_to posts_path
+    flash[:success] = "The post is destroy!"
+  else
+    redirect_to posts_path
+  end
+end
     @post = Post.new(permit_post)
     if @post.save
       flash[:success] = "Success!"
